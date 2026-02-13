@@ -30,16 +30,24 @@ tblrecipies:
     Primary Key, auto increment
 - recipiename
 - cookingtime
+    if cooking time > 24 hours, convert to days when displayed
+    stored in minutes
 - favorites
 
 tblingredients
 - ingredientID
     primary key
-- instorage
-    e.g. refrigerated, cupboard, freezer...
+- storageID
+    foreign key => tblstorage
 - ingredientname
 - staple
     bool: T or F
+
+tblstorage
+- storageID
+    primary key
+- storagetype
+    e.g. refrigerated, cupboard, freezer...
 
 tbllinkrecipies
 - recipieID
@@ -75,7 +83,16 @@ tbldietryreqs
 - reqname
 
 useringredients
+- userID
+    foreign key => tblusers
 - ingredientID
     foreignkey => tblingredients
     primary key
 - offdate
+
+tblusers
+- userID
+    primary key
+- username
+- email
+- passwordhash
