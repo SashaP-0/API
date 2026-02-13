@@ -117,3 +117,11 @@ Page structure:
     favorite recipies
 - create recipies
     create and upload recipies
+
+Frontend:
+- HTML
+- CSS
+- Vanilla JavaScript
+Backend:
+- PHP 
+- MySQL
