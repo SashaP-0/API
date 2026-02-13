@@ -47,7 +47,7 @@ try {
             recipiename VARCHAR(255) NOT NULL,
             cookingtime INT NOT NULL,
             favorites BOOLEAN DEFAULT FALSE,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            imagepath VARCHAR(500),
         ) ENGINE=InnoDB;
     ");
 
@@ -142,7 +142,7 @@ try {
         ) ENGINE=InnoDB;
     ");
 
-    echo "Database and tables created successfully!";
+    echo "Database and tables created successfully";
 
 } catch (PDOException $e) {
     die("Error: " . $e->getMessage());
